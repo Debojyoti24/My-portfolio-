@@ -20,7 +20,7 @@ export class ExperienceComponent {
       position: "Java Developer",
       company: "CodeAlpha",
       companyUrl: "https://www.codealpha.tech/",
-      startDate: "January 2024",
+      startDate: "July 2025",
       endDate: "Present",
       achievements: [
         "Designed and implemented a robust backend webhook for in-app purchases for Android, improving the reliability of payment notification handling for both subscriptions and single product purchases, resulting in a 20% decrease in transaction disputes",

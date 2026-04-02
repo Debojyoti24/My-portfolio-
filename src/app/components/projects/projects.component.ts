@@ -32,10 +32,10 @@ export class ProjectsComponent {
     {
       title: "Cre8tor - AI-Powered Content Creation Platform",
       description: [
-        "The project involves the implementation of a receptionist system for tourists and hotel guests, utilizing a multilingual AI avatar.",
-        "The system provides assistance and information to guests in multiple languages, enhancing their overall experience while streamlining hotel operations.",
+        "Built a comprehensive content management platform enabling creators to manage posts, engage with audiences, and track performance through integrated analytics.",
+        "Designed a scalable and robust system with features like post management, secure user authentication, and efficient data handling for seamless content creation workflows.",
       ],
-      techStack: ["Node.js", "Python", "OpenAI API", "Nginx"],
+      techStack: ["React.js", "Convex", "Clerk Authentication", "Imagekit", "Tailwind CSS"],
       image: "/assets/ai-receptionist.webp",
       aosImage: "fade-right",
     },

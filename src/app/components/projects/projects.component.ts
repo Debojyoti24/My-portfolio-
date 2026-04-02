@@ -20,12 +20,12 @@ export class ProjectsComponent {
       aosImage: "fade-right",
     },
     {
-      title: "Smile Analysis Web Application",
+      title: "Invoice Generator - Digital billing & payment Solution ",
       description: [
-        "Developed and deployed a smile detection application for elderly residents in Japanese old age homes using computer vision and machine learning algorithms.",
-        "Designed and implemented a user-friendly interface using Angular with Flask backend to analyze smiles in real-time.",
+        "Built a full-stack invoice management platform with dynamic invoice creation, real-time preview, and PDF export, supporting multiple currencies, tax configurations, and customizable templates; implemented Clerk-based authentication with role-based access for admin and clients.",
+        "Developed a Spring Boot backend with JWT-secured APIs, MongoDB for efficient data storage and retrieval, and Cloudinary for asset management; containerized the entire application using Docker for scalable and seamless deployment.",
       ],
-      techStack: ["Angular", "Python", "SQL Server", "AWS"],
+      techStack: ["React.js", "Spring Boot", "MongoDB", "Clerk Authentication", "Cloudinary", "Docker"],
       image: "/assets/smile-project.webp",
       aosImage: "fade-left",
     },

@@ -30,7 +30,7 @@ export class ProjectsComponent {
       aosImage: "fade-left",
     },
     {
-      title: "AI Receptionist",
+      title: "Cre8tor - AI-Powered Content Creation Platform",
       description: [
         "The project involves the implementation of a receptionist system for tourists and hotel guests, utilizing a multilingual AI avatar.",
         "The system provides assistance and information to guests in multiple languages, enhancing their overall experience while streamlining hotel operations.",

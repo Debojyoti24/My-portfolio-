@@ -9,80 +9,91 @@ import { UrlNormalizationGuard } from "./guards/url-normalization.guard";
 
 export const routes: Routes = [
   {
-    path: '',
+    path: "",
     component: HomeComponent,
     canActivate: [UrlNormalizationGuard],
     data: {
-      title: 'Home',
-      description: 'Darshan Bhuva - Full-Stack Developer specializing in Angular, .NET, and modern web technologies. Explore my portfolio, experience, and projects.',
-      keywords: 'Darshan Bhuva, Full-Stack Developer, Angular Developer, .NET Developer, Portfolio, Web Development'
-    }
+      title: "Home",
+      description:
+        "Debojyoti Bhattacherjee - Full-Stack Developer specializing in React, java, and modern web technologies. Explore my portfolio, experience, and projects.",
+      keywords: "Debojyoti Bhattacherjee, Full-Stack Developer, Android Developer, Portfolio, Web Development",
+    },
   },
   {
-    path: 'about',
+    path: "about",
     component: AboutComponent,
     canActivate: [UrlNormalizationGuard],
     data: {
-      title: 'About Me',
-      description: 'Learn about Darshan Bhuva, a passionate Full-Stack Developer with expertise in Angular, .NET, and modern web technologies.',
-      keywords: 'About Darshan Bhuva, Full-Stack Developer Background, Angular Developer Profile, .NET Developer Experience'
-    }
+      title: "About Me",
+      description:
+        "Learn about Debojyoti Bhattacherjee, a passionate Full-Stack Developer with knowledge in React, Java, and modern web technologies.",
+      keywords:
+        "About Debojyoti Bhattacherjee, Full-Stack Developer Background, React Developer Profile, Java Developer Experience",
+    },
   },
   {
-    path: 'experience',
+    path: "experience",
     component: ExperienceComponent,
     canActivate: [UrlNormalizationGuard],
     data: {
-      title: 'Experience',
-      description: 'Explore Darshan Bhuva\'s professional experience as a Full-Stack Developer. View detailed work history, technical skills, and career achievements.',
-      keywords: 'Darshan Bhuva Experience, Full-Stack Developer Career, Angular Developer Jobs, .NET Developer Experience, Web Development Skills'
-    }
+      title: "Experience",
+      description:
+        "Explore Debojyoti Bhattacherjee's professional experience as a Full-Stack Developer. View detailed work history, technical skills, and career achievements.",
+      keywords:
+        "Debojyoti Bhattacherjee Experience, Full-Stack Developer Career, React Developer Jobs, Java Developer Experience, Web Development Skills",
+    },
   },
   {
-    path: 'projects',
+    path: "projects",
     component: ProjectsComponent,
     canActivate: [UrlNormalizationGuard],
     data: {
-      title: 'Projects',
-      description: 'Explore Darshan Bhuva\'s portfolio of innovative web applications and software projects. View detailed case studies of Angular, .NET, and full-stack development work.',
-      keywords: 'Darshan Bhuva Projects, Full-Stack Developer Portfolio, Angular Projects, .NET Applications, Web Development Portfolio'
-    }
+      title: "Projects",
+      description:
+        "Explore Debojyoti Bhattacherjee's portfolio of innovative web applications and software projects. View detailed case studies of React, Java, and full-stack development work.",
+      keywords:
+        "Debojyoti Bhattacherjee Projects, Full-Stack Developer Portfolio, React Projects, Java Applications, Web Development Portfolio",
+    },
   },
   {
-    path: 'contact',
+    path: "contact",
     component: ContactComponent,
     canActivate: [UrlNormalizationGuard],
     data: {
-      title: 'Contact',
-      description: 'Get in touch with Darshan Bhuva for collaboration opportunities, project inquiries, or professional discussions.',
-      keywords: 'Contact Darshan Bhuva, Hire Full-Stack Developer, Angular Developer Contact, .NET Developer Hire, Web Development Services'
-    }
+      title: "Contact",
+      description:
+        "Get in touch with Debojyoti Bhattacherjee for collaboration opportunities, project inquiries, or professional discussions.",
+      keywords:
+        "Contact Debojyoti Bhattacherjee, Hire Full-Stack Developer, React Developer Contact, Java Developer Hire, Web Development Services",
+    },
   },
   {
-    path: 'resume',
+    path: "resume",
     component: ResumeComponent,
     canActivate: [UrlNormalizationGuard],
     data: {
-      title: 'Resume',
-      description: 'Download or view Darshan Bhuva\'s professional resume. Comprehensive overview of skills, experience, and achievements as a Full-Stack Developer.',
-      keywords: 'Darshan Bhuva Resume, Full-Stack Developer CV, Angular Developer Resume, .NET Developer CV, Web Developer Resume Download'
-    }
+      title: "Resume",
+      description:
+        "Download or view Debojyoti Bhattacherjee's professional resume. Comprehensive overview of skills, experience, and achievements as a Full-Stack Developer.",
+      keywords:
+        "Debojyoti Bhattacherjee Resume, Full-Stack Developer CV, React Developer Resume, Java Developer CV, Web Developer Resume Download",
+    },
   },
   // Legacy hash-based URL redirects
   {
-    path: 'about-me',
-    redirectTo: '/about',
-    pathMatch: 'full'
+    path: "about-me",
+    redirectTo: "/about",
+    pathMatch: "full",
   },
   {
-    path: 'skills',
-    redirectTo: '/experience',
-    pathMatch: 'full'
+    path: "skills",
+    redirectTo: "/experience",
+    pathMatch: "full",
   },
   {
-    path: 'testimonials',
-    redirectTo: '/experience',
-    pathMatch: 'full'
+    path: "testimonials",
+    redirectTo: "/experience",
+    pathMatch: "full",
   },
-  { path: '**', redirectTo: '' } // Wildcard route for 404 pages
+  { path: "**", redirectTo: "" }, // Wildcard route for 404 pages
 ];

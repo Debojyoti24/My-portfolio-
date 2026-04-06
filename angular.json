@@ -50,28 +50,21 @@
               "src/assets",
               "src/manifest.json",
               "src/sitemap.xml",
-              "src/robots.txt",
-              "src/resume.pdf"
+              "src/robots.txt"
             ],
             "index": "src/index.html",
             "browser": "src/main.ts",
             "outputPath": "dist/portfolio",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "scripts": [],
-            "styles": [
-              "src/global_styles.css"
-            ],
+            "styles": ["src/global_styles.css"],
             "tsConfig": "tsconfig.app.json",
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
             },
-            "allowedCommonJsDependencies": [
-              "aos"
-            ]
+            "allowedCommonJsDependencies": ["aos"]
           }
         },
         "serve": {

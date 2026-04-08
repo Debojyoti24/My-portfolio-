@@ -36,7 +36,7 @@ export class ProjectsComponent {
         "Designed a scalable and robust system with features like post management, secure user authentication, and efficient data handling for seamless content creation workflows.",
       ],
       techStack: ["React.js", "Convex", "Clerk Authentication", "Imagekit", "Tailwind CSS"],
-      image: "/assets/ai-receptionist.webp",
+      image: "/assets/Cre8tor.jpg",
       aosImage: "fade-right",
     },
     {

@@ -16,7 +16,7 @@ export class ProjectsComponent {
         "Designed a robust Spring Boot backend with RESTful APIs for file metadata, storage orchestration, and quota enforcement; integrated Razorpay for subscription-based upgrades with webhook handling, and containerized the entire stack using Docker Compose for streamlined deployment.",
       ],
       techStack: ["React.js", "Tailwind CSS", "Spring Boot", "Clerk Authentication", "Razorpay", "Dpocker"],
-      image: "/assets/media-management-platform.webp",
+      image: "/assets/Cloud Share.png",
       aosImage: "fade-right",
     },
     {
@@ -26,7 +26,7 @@ export class ProjectsComponent {
         "Developed a Spring Boot backend with JWT-secured APIs, MongoDB for efficient data storage and retrieval, and Cloudinary for asset management; containerized the entire application using Docker for scalable and seamless deployment.",
       ],
       techStack: ["React.js", "Spring Boot", "MongoDB", "Clerk Authentication", "Cloudinary", "Docker"],
-      image: "/assets/smile-project.webp",
+      image: "/assets/Invoice generator.jpg",
       aosImage: "fade-left",
     },
     {

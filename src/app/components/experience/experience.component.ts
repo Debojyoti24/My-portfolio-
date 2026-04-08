@@ -23,7 +23,7 @@ export class ExperienceComponent {
       startDate: "December 2025",
       endDate: "Present",
       achievements: [
-        "Learning Management System (LMS): Architected and developed the full frontend of a production-grade LMS using React.js and Tailwind CSS, implementing features such as course browsing, student dashboards, and role-based interfaces for instructors and learners.",
+        "Learning Management System (LMS): Architected and developed the full frontend of a production-grade LMS using React Native and Tailwind CSS, implementing features such as course browsing, student dashboards, and role-based interfaces for instructors and learners.",
 
         "Authentication System: Engineered a secure authentication flow including login, registration, and protected routes, fully integrated with backend services using JWT-based session management to ensure secure and scalable user access.",
 

@@ -48,7 +48,7 @@ export class ProjectsComponent {
         " Designed an intuitive user experience with income/expense tracking, transaction history, pull-to-refresh, and dynamic UI updates, delivering  a responsive app compatible with both iOS and Android platforms. ",
       ],
       techStack: ["React Native · Expo · React Navigation · Clerk Auth · PostgreSQL (Neon)"],
-      image: "/assets/docu-query-ai.webp",
+      image: "/assets/money Manegar.jpg",
       aosImage: "fade-left",
     },
   ];

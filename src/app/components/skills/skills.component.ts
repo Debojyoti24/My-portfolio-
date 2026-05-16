@@ -151,13 +151,13 @@ export class SkillsComponent {
     {
       name: "GitHub",
     },
-    // {
-    //   name: "AWS",
-    //   logo: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-    //   isInvertLogo: false,
-    //   proficiency: "Intermediate",
-    //   experience: 2,
-    // },
+    {
+      name: "n8n",
+      logo: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/n8n.svg",
+      isInvertLogo: false,
+      proficiency: "Intermediate",
+      experience: 2,
+    },
     {
       name: "Vercel",
       logo: "https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/vercel/vercel-original.svg",

@@ -1,23 +1,25 @@
-import { Injectable, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
-import { environment } from '../../environments/environment';
+import { Injectable, Inject } from "@angular/core";
+import { DOCUMENT } from "@angular/common";
+import { environment } from "../../environments/environment";
 
 declare let gtag: Function;
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class GoogleAnalyticsService {
   private isScriptLoaded = false;
 
-  constructor(@Inject(DOCUMENT) private document: Document) { }
+  constructor(@Inject(DOCUMENT) private document: Document) {}
 
   loadGoogleAnalytics(): void {
     if (this.isScriptLoaded || !environment.production || !environment.googleAnalyticsId) {
       return;
     }
 
-    const existingScript = this.document.querySelector(`script[src="https://www.googletagmanager.com/gtag/js?id=${environment.googleAnalyticsId}"]`);
+    const existingScript = this.document.querySelector(
+      `script[src="https://www.googletagmanager.com/gtag/js?id=${environment.googleAnalyticsId}"]`,
+    );
     if (existingScript) {
       this.isScriptLoaded = true;
       return;
@@ -25,7 +27,7 @@ export class GoogleAnalyticsService {
 
     this.isScriptLoaded = true;
 
-    const gaScript = this.document.createElement('script');
+    const gaScript = this.document.createElement("script");
     gaScript.async = true;
     gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${environment.googleAnalyticsId}`;
 
@@ -36,7 +38,7 @@ export class GoogleAnalyticsService {
       head.appendChild(gaScript);
     }
 
-    const inlineScript = this.document.createElement('script');
+    const inlineScript = this.document.createElement("script");
     inlineScript.text = `
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -52,14 +54,14 @@ export class GoogleAnalyticsService {
   }
 
   trackResumeDownload(): void {
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'file_download', {
-        file_name: 'resume.pdf',
-        file_extension: 'pdf',
-        link_url: '/resume.pdf',
-        event_category: 'engagement',
-        event_label: 'Resume Download',
-        value: 1
+    if (typeof gtag !== "undefined") {
+      gtag("event", "file_download", {
+        file_name: "resume.pdf",
+        file_extension: "pdf",
+        link_url: "/assets/resume.pdf",
+        event_category: "engagement",
+        event_label: "Resume Download",
+        value: 1,
       });
     }
   }

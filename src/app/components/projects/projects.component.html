@@ -4,57 +4,53 @@
     <h2 class="section-title">My Top Projects</h2>
   </div>
 
-  <!-- Projects -->
-  <div class="space-y-20">
+  <!-- Projects Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
     <div
-      *ngFor="let project of projects; let i = index"
-      class="relative group"
+      *ngFor="let project of displayedProjects; let i = index"
+      class="relative group cursor-pointer"
       [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"
+      (click)="openProject(project)"
     >
       <!-- Hover Glow -->
       <div
         class="absolute inset-0 bg-gradient-to-r from-green-400/0 via-green-400/5 to-green-400/0 rounded-2xl pointer-events-none group-hover:from-green-400/10 group-hover:via-green-400/10 group-hover:to-green-400/10 transition-all duration-300"
       ></div>
 
-      <!-- Grid Layout -->
-      <div class="relative grid md:grid-cols-12 gap-6 lg:gap-8 items-center">
-        <!-- ================= IMAGE SECTION ================= -->
-        <div class="md:col-span-7">
-          <div class="relative w-full aspect-[16/9] rounded-xl overflow-hidden">
-            <img
-              [src]="project?.image"
-              [alt]="project?.title + ' project screenshot'"
-              loading="lazy"
-              class="w-full h-full object-cover brightness-75 group-hover:brightness-90 transition-all duration-300"
-            />
+      <!-- Project Card -->
+      <div
+        class="relative bg-gray-900/40 border border-gray-800 rounded-2xl overflow-hidden hover:border-green-400/40 transition-all duration-300 h-full hover:scale-[1.02]"
+      >
+        <!-- IMAGE SECTION -->
+        <div class="relative w-full aspect-[16/9] overflow-hidden">
+          <img
+            [src]="project.image"
+            [alt]="project.title + ' project screenshot'"
+            loading="lazy"
+            class="w-full h-full object-cover brightness-75 group-hover:brightness-90 transition-all duration-300"
+          />
 
-            <!-- Overlay -->
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-300"
-            ></div>
-          </div>
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity duration-300"
+          ></div>
         </div>
 
-        <!-- ================= CONTENT SECTION ================= -->
-        <div class="md:col-span-5 flex flex-col justify-between">
+        <!-- CONTENT SECTION -->
+        <div class="p-6 flex flex-col justify-between h-full">
           <div>
             <!-- Title -->
-            <h3
-              class="text-3xl md:text-2xl lg:text-3xl font-bold mb-6 text-white group-hover:text-green-400 transition-colors duration-300"
-            >
+            <h3 class="text-2xl font-bold mb-5 text-white group-hover:text-green-400 transition-colors duration-300">
               {{ project.title }}
             </h3>
 
             <!-- Description -->
             <div
-              class="bg-gray-800/40 p-5 md:p-6 mb-6 backdrop-blur-sm rounded-lg border border-transparent group-hover:border-green-400/40 transition-all duration-300"
+              class="bg-gray-800/40 p-5 mb-5 backdrop-blur-sm rounded-lg border border-transparent group-hover:border-green-400/40 transition-all duration-300"
             >
               <ul class="space-y-3">
-                <li
-                  *ngFor="let desc of project.description"
-                  class="text-gray-300 text-sm md:text-base leading-relaxed flex gap-3"
-                >
-                  <span class="text-green-400 font-bold flex-shrink-0">•</span>
+                <li *ngFor="let desc of project.description" class="text-gray-300 text-sm leading-relaxed flex gap-3">
+                  <span class="text-green-400 font-bold flex-shrink-0"> • </span>
                   <span>{{ desc }}</span>
                 </li>
               </ul>
@@ -73,5 +69,15 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Show More / Show Less Button -->
+  <div class="flex justify-center mt-12" *ngIf="projects.length > initialProjectsCount">
+    <button
+      (click)="toggleProjects()"
+      class="px-6 py-3 rounded-xl border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300 font-medium"
+    >
+      {{ showAllProjects ? "Show Less" : "Show More" }}
+    </button>
   </div>
 </section>

@@ -17,22 +17,6 @@ interface Experience {
 export class ExperienceComponent {
   experiences: Experience[] = [
     {
-      position: "Android Developer Intern",
-      company: "Qbays",
-      companyUrl: "",
-      startDate: "December 2025",
-      endDate: "Present",
-      achievements: [
-        "Learning Management System (LMS): Architected and developed the full frontend of a production-grade LMS using React Native and Tailwind CSS, implementing features such as course browsing, student dashboards, and role-based interfaces for instructors and learners.",
-
-        "Authentication System: Engineered a secure authentication flow including login, registration, and protected routes, fully integrated with backend services using JWT-based session management to ensure secure and scalable user access.",
-
-        "API Integration & Component Design: Built and integrated 8+ reusable React components with RESTful APIs, standardizing asynchronous data-fetching patterns and minimizing page-load inconsistencies across the application.",
-
-        "Collaborative Development Workflow: Maintained a clean and efficient Git/GitHub workflow in a distributed team environment, utilizing structured feature branching, pull requests, code reviews, and effective merge conflict resolution.",
-      ],
-    },
-    {
       position: "Java Programing Internship",
       company: "CodeAlpha",
       companyUrl: "https://www.codealpha.tech/",

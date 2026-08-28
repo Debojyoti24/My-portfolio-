@@ -9,7 +9,7 @@ export const profile = {
   resumeUrl: "/resume.pdf",
   avatarInitials: "AR",
   bio: [
-    "Hi there! I'm Debojyoti, Full-Stack Developer specializing in scalable and efficient web applications, along with hands-on experience in Android app development.",
+    "Hi there! I'm Debojyoti, AI, Automation & Full-Stack Engineer specializing in scalable and efficient web applications, along with hands-on experience in Android app development.",
     "My passion lies in building responsive frontend systems, developing Backends, and optimizing database architectures. I strive to deliver scalable, high-performance, and user-centric solutions using modern technologies.",
   ],
   socials: [

@@ -18,15 +18,28 @@ export default function ProjectCard({ project }: { project: Project }) {
       className="card group relative flex flex-col overflow-hidden transition-colors hover:border-accent-soft/50"
     >
       <div className={`relative h-36 bg-gradient-to-br ${project.gradient} overflow-hidden`}>
-        <div className="bg-grid absolute inset-0 opacity-40" />
+        {project.image ? (
+          <>
+            <img
+              src={project.image}
+              alt={project.title}
+              className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-bg/70 via-transparent to-transparent" />
+          </>
+        ) : (
+          <>
+            <div className="bg-grid absolute inset-0 opacity-40" />
+            <span className="absolute left-5 bottom-4 font-display text-3xl font-bold text-text/90">
+              {project.title
+                .split(" ")
+                .map((w) => w[0])
+                .slice(0, 2)
+                .join("")}
+            </span>
+          </>
+        )}
         <span className="absolute right-4 top-4 tag !bg-bg/50">{project.year}</span>
-        <span className="absolute left-5 bottom-4 font-display text-3xl font-bold text-text/90">
-          {project.title
-            .split(" ")
-            .map((w) => w[0])
-            .slice(0, 2)
-            .join("")}
-        </span>
       </div>
 
       <div className="flex flex-1 flex-col p-6">

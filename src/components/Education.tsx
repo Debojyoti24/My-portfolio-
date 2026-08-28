@@ -36,6 +36,11 @@ export default function Education() {
                 {item.location}
                 {item.gpa ? ` · GPA ${item.gpa}` : ""}
               </p>
+              {item.rank ? (
+                <span className="mt-3 inline-flex items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold text-bg">
+                  {item.rank}
+                </span>
+              ) : null}
               <ul className="mt-4 space-y-2">
                 {item.details.map((d, idx) => (
                   <li key={idx} className="flex gap-2 text-sm text-text-dim">

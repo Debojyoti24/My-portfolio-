@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Fira Code", monospace;
+
+  --color-bg: #0f172a;
+  --color-bg-soft: #0b1220;
+  --color-surface: #16213a;
+  --color-surface-hi: #1c2947;
+  --color-border: #27345a;
+  --color-border-soft: #1e2a48;
+
+  --color-text: #e8ecf5;
+  --color-text-dim: #94a3b8;
+  --color-text-faint: #64748b;
+
+  --color-accent: #facc15;
+  --color-accent-soft: #fde047;
+  --color-cyan: #2dd4bf;
+  --color-pink: #38bdf8;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-bg);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply mx-auto w-full max-w-6xl px-6 md:px-10;
+  }
+
+  .section-heading {
+    @apply flex items-center gap-4 mb-12;
+  }
+
+  .section-heading .num {
+    @apply font-mono text-accent text-lg;
+  }
+
+  .section-heading h2 {
+    @apply font-display text-2xl md:text-3xl font-semibold text-text whitespace-nowrap;
+  }
+
+  .section-heading .line {
+    @apply h-px w-full bg-gradient-to-r from-border-soft to-transparent;
+  }
+
+  .card {
+    @apply bg-surface border border-border rounded-2xl;
+    transition:
+      transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.4s ease,
+      border-color 0.4s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+      0 0 0 1px rgba(250, 204, 21, 0.2),
+      0 24px 48px -24px rgba(250, 204, 21, 0.25),
+      0 16px 40px -20px rgba(45, 212, 191, 0.18);
+  }
+
+  .btn-primary {
+    @apply relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-accent px-6 py-3 font-medium text-bg shadow-[0_0_0_1px_rgba(250,204,21,0.35),0_10px_24px_-8px_rgba(250,204,21,0.45)] transition-all duration-300 hover:shadow-[0_0_0_1px_rgba(250,204,21,0.5),0_14px_32px_-8px_rgba(250,204,21,0.6)] hover:-translate-y-0.5;
+  }
+
+  .btn-ghost {
+    @apply relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-border px-6 py-3 font-medium text-text transition-all duration-300 hover:border-accent-soft hover:text-accent hover:-translate-y-0.5;
+  }
+
+  .btn-primary::after,
+  .btn-ghost::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: -75%;
+    width: 50%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.7s ease;
+  }
+
+  .btn-primary:hover::after,
+  .btn-ghost:hover::after {
+    left: 125%;
+  }
+
+  .tag {
+    @apply rounded-full border border-border-soft bg-surface-hi px-3 py-1 text-xs font-mono text-text-dim;
+  }
+
+  .glass-nav {
+    @apply backdrop-blur-xl bg-bg/70 border-b border-border-soft;
+  }
+}
+
+@utility text-gradient {
+  background: linear-gradient(120deg, var(--color-accent-soft), var(--color-cyan) 60%, var(--color-pink));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(232, 236, 245, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(232, 236, 245, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
